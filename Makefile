@@ -55,3 +55,6 @@ cc: sf
 ## —— Test ————————————————————————————————————————————————————————————————
 test:
 	@$(PHP_CONT) bin/phpunit
+
+test-coverage:
+	@$(DOCKER_COMP) exec -e XDEBUG_MODE=coverage php bin/phpunit --coverage-text

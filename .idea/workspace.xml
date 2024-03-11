@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ce3472b-35fd-4ed0-9b74-63c759f0efe4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/php-test-framework.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/remote-mappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/CartController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Cart.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/CartItem.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Model/CartItemTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Model/CartTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Controller/CartControllerTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CartController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,6 +110,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "PHPUnit.CartControllerTest.executor": "Run",
     "PHPUnit.CartItemTest.executor": "Run",
     "PHPUnit.CartTest.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -132,7 +128,16 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="PHPUnit.CartTest">
+  <component name="RunManager" selected="PHPUnit.CartControllerTest">
+    <configuration name="CartControllerTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="php" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner class="App\Tests\Controller\CartControllerTest" configuration_file="/app/phpunit.xml.dist" file="$PROJECT_DIR$/tests/Controller/CartControllerTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
     <configuration name="CartItemTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <CommandLine>
         <PhpTestInterpreterSettings>
@@ -157,8 +162,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.CartTest" />
+        <item itemvalue="PHPUnit.CartControllerTest" />
         <item itemvalue="PHPUnit.CartItemTest" />
+        <item itemvalue="PHPUnit.CartTest" />
       </list>
     </recent_temporary>
   </component>
@@ -179,7 +185,7 @@
       <updated>1710096447542</updated>
       <workItem from="1710096448584" duration="2225000" />
       <workItem from="1710157348667" duration="3831000" />
-      <workItem from="1710179898254" duration="2831000" />
+      <workItem from="1710179898254" duration="4673000" />
     </task>
     <servers />
   </component>
