@@ -1,9 +1,7 @@
-# Symfony Docker
+# UnitTests Example
 
-A [Docker](https://www.docker.com/)-based installer and runtime for the [Symfony](https://symfony.com) web framework,
-with [FrankenPHP](https://frankenphp.dev) and [Caddy](https://caddyserver.com/) inside!
-
-![CI](https://github.com/dunglas/symfony-docker/workflows/CI/badge.svg)
+This repository is made for live presentation on Magento Meetup in Wrocław.
+It's meant to demonstrate how to write and how to not write unit tests.
 
 ## Getting Started
 
