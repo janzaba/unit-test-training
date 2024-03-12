@@ -21,8 +21,18 @@ class CartTest extends TestCase
     public function testCalculateTotal(): void
     {
         $cart = new Cart();
-        $cart->addItem(new CartItem(1, 2));
-        $cart->addItem(new CartItem(2, 3));
+        $cartItemMock1 = $this->createMock(CartItem::class);
+        $cartItemMock1
+            ->expects($this->once())
+            ->method('getItemTotal')
+            ->willReturn(20);
+        $cartItemMock2 = $this->createMock(CartItem::class);
+        $cartItemMock2
+            ->expects($this->once())
+            ->method('getItemTotal')
+            ->willReturn(30);
+        $cart->addItem($cartItemMock1);
+        $cart->addItem($cartItemMock2);
 
         $result = $cart->calculateTotal();
 
@@ -31,13 +41,25 @@ class CartTest extends TestCase
 
     public function testRemoveItem(): void
     {
+        // Arrange
         $cart = new Cart();
-        $cart->addItem(new CartItem(1, 2));
-        $cart->addItem(new CartItem(2, 3));
+        $cartItemMock1 = $this->createMock(CartItem::class);
+        $cartItemMock1->method('getProductID')->willReturn(1);
 
+        $cartItemMock2 = $this->createMock(CartItem::class);
+        $cartItemMock2
+            ->method('getItemTotal')
+            ->willReturn(30);
+        $cartItemMock2->method('getProductID')->willReturn(2);
+
+        $cart->addItem($cartItemMock1);
+        $cart->addItem($cartItemMock2);
+
+        // Act
         $cart->removeItem(1);
         $result = $cart->calculateTotal();
 
+        // Assert
         $this->assertEquals(30, $result);
     }
 }
