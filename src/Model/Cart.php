@@ -24,7 +24,7 @@ class Cart {
         }
     }
 
-    public function calculateTotal(): float|int
+    public function calculateTotal(): int
     {
         $total = 0;
         /** @var CartItem $item */
