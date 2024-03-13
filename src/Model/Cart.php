@@ -10,7 +10,7 @@ class Cart {
         $this->items = [];
     }
 
-    public function addItem($item): void
+    public function addItem(CartItem $item): void
     {
         $this->items[] = $item;
     }
@@ -31,6 +31,7 @@ class Cart {
         foreach ($this->items as $item) {
             $total += $item->getItemTotal();
         }
+
         return $total;
     }
 }
