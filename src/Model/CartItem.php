@@ -18,11 +18,6 @@ class CartItem {
         return $this->productID;
     }
 
-    public function getQuantity(): int
-    {
-        return $this->quantity;
-    }
-
     public function getItemTotal(): int
     {
         return $this->quantity * self::PRICE;
