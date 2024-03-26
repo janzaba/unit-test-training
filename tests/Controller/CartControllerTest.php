@@ -12,6 +12,7 @@ class CartControllerTest extends TestCase
 
     public function testAddToCart()
     {
+        // integration test would be better here
         $cartMock = $this->createMock(Cart::class);
         $cartController = new CartController($cartMock);
         $cartMock
