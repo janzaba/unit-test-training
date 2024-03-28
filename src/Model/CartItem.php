@@ -22,4 +22,10 @@ class CartItem {
     {
         return $this->quantity * self::PRICE;
     }
+
+    public function getDiscountedTotal(Discount $discount): float
+    {
+        $total = $this->getItemTotal();
+        return $discount->applyDiscount($total);
+    }
 }
