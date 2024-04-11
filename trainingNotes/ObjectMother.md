@@ -5,6 +5,7 @@ The main idea behind the Object Mother pattern is to have a class that can produ
 Here's a simple example:
 
 ```php
+// PHP
 class UserMother {
     public static function createWithSpecificState(): User
     {
@@ -18,14 +19,61 @@ class UserMother {
 }
 ```
 
+```javascript
+// JS
+const UserMother = {
+    createNewUser() {
+        return {
+            username: "newUser",
+            isAdmin: false,
+            isPending: false
+        }
+    },
+    createAdminUser() {
+        return {
+            username: "adminUser",
+            isAdmin: true,
+            isPending: false
+        }
+    },
+    createPendingUser() {
+        return {
+            username: "pendingUser",
+            isAdmin: false,
+            isPending: true
+        }
+    }
+}
+
+```
+
 In your tests, you can then use the Object Mother to create a `User` object with the specific state:
 
 ```php
+// PHP
 public function testSomethingWithUser()
 {
     $user = UserMother::createWithSpecificState();
     // your test code...
 }
+```
+
+```javascript
+// JS
+describe('User Permissions', () => {
+    it('should allow admin user to access admin panel', () => {
+        const adminUser = UserMother.createAdminUser()
+        // test that adminUser can access admin panel
+    })
+
+    it('should not allow new user to access admin panel', () => {
+        const newUser = UserMother.createNewUser()
+        // test that newUser cannot access admin panel
+    })
+
+    // and so on for other scenarios...
+})
+
 ```
 
 This way, if the way a `User` object with a specific state is created changes, you only need to update the `UserMother` class, and all your tests will still work.
